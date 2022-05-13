@@ -11,6 +11,11 @@ Requirements:
 - DC also processes requests for authentication from users within a computer domain. 
 - Domain controllers are most commonly used in Windows Active Directory (AD) domains but are also used with other types of identity management systems.
 
+# What is a domain in Active Directory?
+- An Active Directory domain is a collection of objects within a Microsoft Active Directory network. 
+- An object can be a single user or a group or it can be a hardware component, such as a computer or printer. 
+- Each domain holds a database containing object identity information. AD domain can manage multiple domains.
+
 # What is a DNS Server?
 - Domain Name System(DNS) is a server that is specifically used for matching website names (like google.com or microsoft.com) to their corresponding IP addresses.
 - DNS Server contains a database of public IP addresses and their corresponding domain names.
@@ -20,6 +25,12 @@ Requirements:
 - Active Directory uses uses DNS to find and resolve distinguished names into IP addresses.
 - AD cannot work without DNS.
 
+# Use Case: Install AD connect on on-premises AD environment and sync users to Azure AD environment
+- Since I do not have a on premise environment, an Azure VM will act as an on-premise AD environment.
+- Three VMs will be needed
+- One VM will act as a Directory
+- One VM will be the server where AD connect is installed
+- One VM will be domain joined to the Directory where the Admin can log into.
 
 # Install AD DS on VM and Ensure a Domain is in place
 - This VM will act as AD. 

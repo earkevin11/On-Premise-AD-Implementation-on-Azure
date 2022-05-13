@@ -5,6 +5,11 @@ Requirements:
 - Install AD role
 - Installing AD role will automatically install DNS Service
 
+# What is a domain controller?
+- Domain controller is a server on the network that centrally manages access for users, PCs and servers on the network. 
+- It does this using AD. Active Directory is a database that organises your company's users and computers.
+- DC also processes requests for authentication from users within a computer domain. 
+- Domain controllers are most commonly used in Windows Active Directory (AD) domains but are also used with other types of identity management systems.
 
 # What is a DNS Server?
 - Domain Name System(DNS) is a server that is specifically used for matching website names (like google.com or microsoft.com) to their corresponding IP addresses.

@@ -32,12 +32,17 @@ Requirements:
 - One VM will be the server where AD connect is installed
 - One VM will be domain joined to the Directory where the Admin can log into.
 
-# Install AD DS on VM and Ensure a Domain is in place
-- This VM will act as AD. 
+# Create a VM and Install AD DS on VM and ensure a Domain is in place. Call it <em> OnPremiseAD. </em>
+- This VM will act as your on-premise Active Directory environment. 
 
 # How to ensure VMs use our VM (VM with AD DS installed) as a DNS Server?
-- Ensure our directory server becomes the DNS server for the VNet. -73
-- Place the private IP of the first VM created as the Custom DNS Server and add it as a custom DNS server. Remember we installed a DNS service on our VM.
+- Ensure our directory server becomes the DNS server for the VNet. 
+- Place the private IP of the first VM (On-Premise AD) created as the Custom DNS Server and add it as a custom DNS server. 
+- Remember we installed a DNS service on our VM.
 
-# Spim up a new VM and domain join onto the Directory
-- When we domain join onto the domain, IT admins can view the VM within the Active Directory
+# Spim up a new VM and domain join onto the On-Premise Active Directory VM. Call it <em> webserver. </em>
+- When we domain join the webserver VM onto the domain, IT admins can view the VM within the Active Directory
+- Domain join webserver VM onto On-Premise AD vm 
+
+# Create a new VM to install Azure AD Connect onto the server. Call it <em> adconnectserver </em>
+- AD Connect must be on a Windows 2019 Server

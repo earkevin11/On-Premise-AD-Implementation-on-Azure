@@ -168,10 +168,11 @@ Requirements:
 - domainUserA and domainUserB should be in the Azure AD directory
 - Congrats! The users created from the on-premise AD environment have been synced onto the Azure AD environment
 - Users created from on-premise environment can now log onto the Azure Portal using their credentials
+- Note that whatever settings an IT admin applied for sign-ins does not apply since it is Pass-Through Authentication (On-Prem first)
 
 <p align="center">
   
-<img src="https://user-images.githubusercontent.com/104326475/168636662-8616f37e-3e96-4336-883f-05e63159e2d8.png" height="150%" width="150%" alt="AD DS "/>
+<img src="https://user-images.githubusercontent.com/104326475/168652337-47de586a-8ce1-48cf-8064-aab2f8c92bdb.png" height="150%" width="150%" alt="AD DS "/>
   
 <p/>
 

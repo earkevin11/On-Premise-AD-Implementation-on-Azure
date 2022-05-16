@@ -118,3 +118,63 @@ Requirements:
 
 # Create a new VM - adconnectserver1 to install Azure AD Connect onto the server. Call it <em> adconnectserver </em>
 - AD Connect must be on a Windows 2019 Server
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168625972-2e2a6ee9-464e-417d-b5cb-28fbf8231b69.png" height="75%" width="75%" alt="AD DS "/>
+  
+<p/>
+
+
+# Create two users in your Active Directory - onpremAD Virtual Machine
+- Navigate to Tools > Active Directory Users and Computers > Users > New 
+- Create two users to sync onto Azure AD environment
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168626871-25d78b4c-edb6-49da-afbf-9d50715bfb3e.png" height="190%" width="190%" alt="AD DS "/>
+  
+<p/>
+
+# Verify that two domain users are created in the domain controller
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168628168-a126bc43-0092-4d76-9927-c1f711df3c8d.png" height="150%" width="150%" alt="AD DS "/>
+  
+<p/>
+
+# Download AD Connect onto the adconnectserver VM
+- Ensure that IE Enhanced Security Configuration is turned off so AD Connect can be installed
+- Click download > Open folder and install > Use express settings 
+- Admins must be Global Admin. If not, assign the Global Admin role.
+- Then sign in with on prem administrator credentials
+- When installing AD Connect, users should be automatically synced from on-premise AD over to Azure AD.
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168629415-100d7be5-e968-4cdf-bd88-5ca66bb0cf52.png" height="150%" width="150%" alt="AD DS "/>
+  
+<p/>
+
+- Verify on Azure AD that the users created within the onpremad VM was synced
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168636174-f6e86bd5-24c9-4453-96ca-cac44a65b966.png" height="150%" width="150%" alt="AD DS "/>
+  
+<p/>
+
+- domainUserA and domainUserB should be in the Azure AD directory
+- Congrats! The users created from the on-premise AD environment have been synced onto the Azure AD environment
+- Users created from on-premise environment can now log onto the Azure Portal using their credentials
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168636662-8616f37e-3e96-4336-883f-05e63159e2d8.png" height="150%" width="150%" alt="AD DS "/>
+  
+<p/>
+
+
+
+

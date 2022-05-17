@@ -28,9 +28,15 @@ Requirements:
 # Use Case: Install AD connect on on-premises AD environment and sync users to Azure AD environment
 - Since I do not have a on premise environment, an Azure VM will act as an on-premise AD environment.
 - Three VMs will be needed
-- One VM will act as a Directory
-- One VM will be the server where AD connect is installed
-- One VM will be domain joined to the Directory where the Admin can log into.
+- One VM will act as a On-Premise local AD called <em> On-Premise AD </em>
+- One VM will be the server where AD connect is installed. It will be called <em> adconnectserver </em>
+- One VM will be <em> webserver </em> and we will domain join it to the local AD named On-Premise AD.
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168880072-64a1dee4-e2f0-41eb-ab5a-cec01693b6d9.png" height="105%" width="105%" alt=""/>
+  
+<p/>
 
 # Create a VM and RDP into the VM to install AD DS on VM and ensure a Domain is in place. Call it <em> OnPremiseAD. </em>
 - This VM will act as your on-premise Active Directory environment. 
@@ -88,7 +94,8 @@ Requirements:
 
 
 
-# Spin up a new VM and domain join onto the On-Premise Active Directory VM. Call it <em> webserver. </em>
+# Spin up a new VM and domain join onto the On-Premise Active Directory VM. 
+# Call it <em> webserver </em>
 - When we domain join the webserver VM onto the domain, IT admins can view the VM within the Active Directory
 - Domain join webserver VM onto On-Premise AD VM
 

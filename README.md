@@ -22,8 +22,8 @@ Requirements:
 - Think of a phone book where users can search for a person and then retrieve their phone number.
 
 # Why is DNS server important to Active Directory?
-- Active Directory uses uses DNS to find and resolve distinguished names into IP addresses.
-- AD cannot work without DNS.
+- Active Directory uses Domain Name Server (DNS) to find and resolve domain names into IP addresses.
+- Active Directory cannot work without DNS.
 
 # Use Case: Install AD connect on on-premises AD environment and sync users to Azure AD environment
 - Since I do not have a on premise environment, an Azure VM will act as an on-premise AD environment.

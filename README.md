@@ -94,7 +94,7 @@ Requirements:
 
 
 
-# Spin up a new VM and domain join onto the On-Premise Active Directory VM. 
+# Spin up a new VM and domain join the web server onto the On-Premise Active Directory VM. 
 # Call it <em> webserver </em>
 - When we domain join the webserver VM onto the domain, IT admins can view the VM within the Active Directory
 - Domain join webserver VM onto On-Premise AD VM
@@ -124,7 +124,7 @@ Requirements:
 <p/>
 
 # Create a new VM - adconnectserver1 to install Azure AD Connect onto the server. Call it <em> adconnectserver </em>
-- AD Connect must be on a Windows 2019 Server
+- AD Connect must also be domain joined to the on prem AD server. And it be on a Windows 2019 Server
 
 <p align="center">
   

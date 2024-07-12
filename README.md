@@ -66,6 +66,8 @@ Requirements:
 
 - After the installation process, click <em> promote this as domain controller </em>
 - This allows other VMs to domin-join the domain controller
+- When you promote it as a Primary Domain Controller, you will need to create a new forest because you do not have a forest yet.
+- You will notice that once you create your root domain name, after restart, in local server > domain > it will show as the root domain name you entered and will no longer show as "WORKGROUP"
 <p align="center">
   
 <img src="https://user-images.githubusercontent.com/104326475/168501928-11181ad1-fc56-4946-8993-272627459068.png" height="75%" width="75%" alt="AD DS "/>
@@ -74,9 +76,9 @@ Requirements:
 
 
 # How to ensure VMs use our VM (VM with AD DS installed) as a DNS Server?
-- To ensure that VMs to pick up the domain controller as the internal domain, IT admins must directory server becomes the DNS server for the VNet. 
+- To ensure that VMs can pick up the domain controller as the internal domain, IT admins must make our on premise server to become the DNS server for the VNet. 
 - Place the private IP of the first VM (On-Premise AD) created as the Custom DNS Server and add it as a custom DNS server. 
-- Remember we installed a DNS service on our VM.
+- Remember we installed a DNS server service on our on premise AD server VM.
 
 - Take private IP of onpremAD VM (the domain controller) and use it as custom DNS server
 <p align="center">

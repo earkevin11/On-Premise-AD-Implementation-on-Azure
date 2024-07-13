@@ -2,11 +2,11 @@
 
 Requirements:
 - Azure VM based on Windows Server 2019
-- Install AD role
+- Install Active Directory Domain Services role
 - Installing AD role will automatically install DNS Service
 
 # What is a domain controller?
-- Domain controller is a server on the network that centrally manages access for users, PCs and servers on the network. 
+- Domain controller is a server on the network that centrally manages access for users, PCs, and servers on the network. 
 - It does this using AD. Active Directory is a database that organises your company's users and computers.
 - DC also processes requests for authentication from users within a computer domain. 
 - Domain controllers are most commonly used in Windows Active Directory (AD) domains but are also used with other types of identity management systems.
@@ -31,6 +31,7 @@ Requirements:
 - One VM will act as a On-Premise local AD called <em> On-Premise AD </em>
 - One VM will be the server where AD connect is installed. It will be called <em> adconnectserver </em>
 - One VM will be <em> webserver </em> and we will domain join it to the local AD named On-Premise AD.
+- FAQ: Is it ok to install AD Connect or Entra Connect Sync on the domain controller? It is supported however best practice is to separate the AD Connect Sync application and your domain controller. A good rule of thumb, a domain controller is a domain controller and should be nothing else. Typically, when you install a domain controller, you want to make sure there are no other services that interfere or compete with the compute, memory, networking, or disk resources. Recommended installation is always in a separate server regarding to isolate points of failure.
 
 <p align="center">
   
